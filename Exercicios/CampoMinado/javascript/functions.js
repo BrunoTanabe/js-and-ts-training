@@ -8,7 +8,7 @@ Square = {
 }
 
 // Função que cria a matriz do campo minado
-function createMinefield(rows, columns) {
+function createMinefield_js(rows, columns) {
     const minefield = [];
     
     for (let row = 0; row < rows; row++) {
@@ -29,7 +29,7 @@ function createMinefield(rows, columns) {
 }
 
 // Função que sorteia as minas no campo minado
-function placeMines(minefield, numberOfMines) {
+function placeMines_js(minefield, numberOfMines) {
     const rows = minefield.length;
     const columns = minefield[0].length;
     let minesPlaced = 0;
@@ -46,7 +46,7 @@ function placeMines(minefield, numberOfMines) {
 }
 
 // Função que conta as minas vizinhas de um quadrado específico
-function countNearMines(minefield, row, column) {
+function countNearMine_js(minefield, row, column) {
     const directions = [
       [-1, -1], [-1, 0], [-1, 1],
       [ 0, -1],         [ 0, 1],
@@ -70,7 +70,7 @@ function countNearMines(minefield, row, column) {
 }
 
 // Função que conta as minas vizinhas para todos os quadrados do campo minado
-function countAllMines(minefield) {
+function countAllMines_js(minefield) {
     for (let row = 0; row < minefield.length; row++) {
       for (let column = 0; column < minefield[row].length; column++) {
         countNearMines(minefield, row, column);
@@ -79,7 +79,7 @@ function countAllMines(minefield) {
 }
 
 // Função que imprime a matriz no console
-function printMinefield(minefield) {
+function printMinefield_js(minefield) {
     for (let row = 0; row < minefield.length; row++) {
       let rowString = "";
       for (let column = 0; column < minefield[row].length; column++) {
@@ -94,7 +94,7 @@ function printMinefield(minefield) {
     }
 }
 
-function tests() {
+function tests_js() {
     // Criando a matriz do campo minado
     const minefield = createMinefield(5, 5);
 
@@ -115,4 +115,4 @@ function tests() {
     printMinefield(minefieldCopy);
 }
 
-tests(); // Execução dos testes
+tests_js(); // Execução dos testes
